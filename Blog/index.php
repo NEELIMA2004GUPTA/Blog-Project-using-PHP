@@ -9,7 +9,7 @@ $stmt->bind_result($id, $title, $content, $created_at);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Blog</title>
+    <title>Post your Experience...</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
