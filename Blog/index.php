@@ -23,12 +23,12 @@ $stmt->bind_result($id, $title, $content, $created_at);
     <?php while ($stmt->fetch()) { ?>
         <div class="post">
             <h2><?php echo htmlspecialchars($title); ?></h2>
-            <p><?php echo nl2br(htmlspecialchars($content)); ?></p>
+            <p><?php echo nl2br(htmlspecialchars($content));?></p>
             <div class="actions">
                 <a class="edit-btn" href="edit.php?id=<?php echo $id; ?>&csrf_token=<?php echo $_SESSION['csrf_token']; ?>">Edit</a>
                 <a class="delete-btn" href="delete.php?id=<?php echo $id; ?>&csrf_token=<?php echo $_SESSION['csrf_token']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
             </div>
-        </div>
+        </div> 
     <?php } ?>
 </body>
 </html>
