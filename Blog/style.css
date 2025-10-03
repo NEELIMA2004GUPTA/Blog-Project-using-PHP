@@ -1,14 +1,151 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #f8f9fa; 
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar .left {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50; 
+}
+
+.navbar .right {
+    font-size: 16px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
 a {
     text-decoration: none;
-    color: blue;
+    color: #007BFF;
 }
-input, textarea {
-    width: 300px;
+
+a:hover {
+    text-decoration: underline;
 }
-button {
-    padding: 5px 10px;
+
+.post {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
 }
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    line-height: 1.6;
+}
+
+.post .actions {
+    margin-top: 10px;
+}
+
+.post .actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+
+.edit-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+.add-post {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.add-post:hover {
+    background-color: #218838;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+

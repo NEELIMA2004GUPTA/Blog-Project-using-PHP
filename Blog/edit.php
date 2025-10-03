@@ -1,7 +1,6 @@
 <?php
-
-
 include 'db.php';
+session_start(); // make sure session is started for CSRF token
 
 $id = intval($_GET['id']);
 
@@ -39,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $stmt->close();
-
 }
 ?>
 
@@ -47,16 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Edit Post</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Edit Post</h1>
     <form method="POST">
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <input type="text" name="title" value="<?php echo htmlspecialchars($post['title']); ?>" required><br><br>
-        <textarea name="content" rows="5" required><?php echo htmlspecialchars($post['content']); ?></textarea><br><br>
+        <input type="text" name="title" value="<?php echo htmlspecialchars($post['title']); ?>" required>
+        <textarea name="content" rows="5" required><?php echo htmlspecialchars($post['content']); ?></textarea>
         <button type="submit">Update Post</button>
     </form>
-    <br>
-    <a href="index.php">Back to Home</a>
+    <a class="back-link" href="index.php">Back to Home</a>
 </body>
 </html>

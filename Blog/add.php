@@ -22,26 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: " . $stmt->error;
     }
 
-    
     $stmt->close();
 }
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Add Post</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Add Post</h1>
     <form method="POST">
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <input type="text" name="title" placeholder="Title" required><br><br>
-        <textarea name="content" placeholder="Content" rows="5" required></textarea><br><br>
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" rows="5" required></textarea>
         <button type="submit">Add Post</button>
     </form>
-    <br>
-    <a href="index.php">Back to Home</a>
+    <a class="back-link" href="index.php">Back to Home</a>
 </body>
 </html>
+
